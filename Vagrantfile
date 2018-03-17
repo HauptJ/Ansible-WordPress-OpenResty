@@ -91,10 +91,11 @@ Vagrant.configure("2") do |config|
   	end
 
     centos.vm.provision "shell", inline: <<-SHELL
-    git clone https://github.com/HauptJ/Ansible-WordPress-OpenResty.git
+    git clone --recursive https://github.com/HauptJ/Ansible-WordPress-OpenResty.git
     pushd Ansible-WordPress-OpenResty/
     ansible-playbook site.yml
     popd
+    chown -R vagrant:vagrant Ansible-WordPress-OpenResty/
     SHELL
 
   end
