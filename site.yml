@@ -10,4 +10,4 @@
     - ansible-role-repo-remi
     - ansible-role-redis
     - ansible-role-openresty
-    - ansible-role-php-fpm
+    # - ansible-role-php-fpm
