@@ -1,0 +1,6 @@
+# OpenResty
+resty_web_user: nginx
+
+# Redis
+rd_mem: 512mb
+rd_mem_pol: allkeys-lru

@@ -76,11 +76,14 @@ Vagrant.configure("2") do |config|
   # end
   #
 
+  #config.vm.synced_folder ".", "/vagrant", {
+  #    type: 'smb',
+  #    smb_username: ENV['VAGRANT_SMB_USERNAME'],
+  #    smb_password: ENV['VAGRANT_SMB_PASSWORD']
+  #  }
+
   config.vm.define "centos" do |centos|
     centos.vm.box = $centos_box
-    centos.ssh.username = "vagrant"
-    # centos.vm.vmname = $centos_vmname
-    # centos.vm.hostname = $centos_vmname
 
   	centos.vm.provider "hyperv" do |hv|
   		hv.vmname = $centos_vmname
